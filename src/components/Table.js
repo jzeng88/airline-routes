@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const Table = ({ rows, columns, format, perPage = 25 }) => {
+const Table = ({ rows, columns, format, perPage = 25, className }) => {
   let [page, setPage] = useState(0);
 
   const nextPage = (event) => {
@@ -48,7 +48,7 @@ const Table = ({ rows, columns, format, perPage = 25 }) => {
 
   return (
     <>
-      <table className="table">
+      <table className={className}>
         <thead>
           <tr>{tableHeaders}</tr>
         </thead>
